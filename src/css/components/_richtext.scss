@@ -70,6 +70,7 @@
   a:hover,
   a:focus {
     color: $color-white;
+    @include font-smoothing;
   }
 
   a:hover,

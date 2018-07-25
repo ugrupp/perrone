@@ -109,6 +109,7 @@ var postCSSPostProcessors = [
   autoprefixer(),
   cssnano({
     preset: 'default',
+    zindex: false,
   }),
   postCssObjectFitImages,
 ];

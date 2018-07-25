@@ -39,3 +39,14 @@
     outline: none;
   }
 }
+
+// Apply default section padding
+@mixin section-padding {
+  padding-top: rem(100px);
+  padding-bottom: rem(100px);
+
+  @include mappy-bp(md) {
+    padding-top: rem(200px);
+    padding-bottom: rem(200px);
+  }
+}

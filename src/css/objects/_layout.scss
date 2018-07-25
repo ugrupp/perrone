@@ -40,13 +40,7 @@
 // default section
 .o-main__section {
   background-color: $color-white;
-  padding-top: rem(100px);
-  padding-bottom: rem(100px);
-
-  @include mappy-bp(md) {
-    padding-top: rem(200px);
-    padding-bottom: rem(200px);
-  }
+  @include section-padding;
 }
 
 // light bg color
