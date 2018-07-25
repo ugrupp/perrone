@@ -5,9 +5,9 @@
 // Pagelayout (outer wrapper)
 .o-pagelayout {
   padding-top: $pagelayout-y-gutter;
-  padding-bottom: $pagelayout-y-gutter;
 
   @include mappy-bp(sm) {
+    padding-bottom: $pagelayout-y-gutter;
     padding-left: $pagelayout-gutter-sm;
     padding-right: $pagelayout-gutter-sm;
   }
