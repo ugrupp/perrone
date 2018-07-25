@@ -32,11 +32,11 @@
   p,
   table {
     &:not(:last-child) {
-      margin-bottom: 1em;
+      margin-bottom: rem(30px);
     }
 
     &:not(:first-child) {
-      margin-top: 1em;
+      margin-top: rem(30px);
     }
   }
 
@@ -55,6 +55,27 @@
     @include font-ci;
     color: $color-content-ci;
     font-style: italic;
+  }
+
+  ul {
+    li {
+      display: flex;
+      align-items: baseline;
+
+      &:not(:last-of-type) {
+        margin-bottom: rem(15px);
+      }
+
+      &::before {
+        content: '';
+        margin-right: .5em;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: rem(7.5px) 0 rem(7.5px) rem(7.5px);
+        border-color: transparent transparent transparent currentColor;
+      }
+    }
   }
 
   .c-headline {

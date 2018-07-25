@@ -50,4 +50,43 @@
 .c-features__content {
   position: relative;
   z-index: 10; // > image
+
+  color: $color-white;
+  @include font-smoothing;
 }
+
+.c-features__cols {
+  @include mappy-bp($bp-grid-collapse) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: rem(-$grid-gutter / 2);
+    margin-right: rem(-$grid-gutter / 2);
+  }
+}
+
+.c-features__col {
+  @include mappy-bp(max $bp-grid-collapse) {
+    & + & {
+      margin-top: rem($grid-gutter / 2);
+    }
+  }
+
+  @include mappy-bp($bp-grid-collapse) {
+    width: (100% / 3);
+    padding-left: rem($grid-gutter / 2);
+    padding-right: rem($grid-gutter / 2);
+  }
+}
+
+.c-features__col--features {
+  @include mappy-bp($bp-grid-collapse) {
+    width: (100% / 3 * 2);
+
+    ul {
+      column-count: 2;
+      column-gap: rem($grid-gutter);
+    }
+  }
+}
+

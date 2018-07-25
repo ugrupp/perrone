@@ -20,27 +20,29 @@ $typi-breakpoint: mappy-bp;
 $typi: (
   // Base for <html>, will be inherited
   base: (
-    null: (16px, 1.6)
+    null: (16px, 1.5)
   ),
 
   richtext: (
-    null: (16px, 1.6),
-    md: (20px)
+    null: (16px, 1.5),
+    sm: (18px),
+    md: (20px),
+    lg: (22px)
   ),
 
   sm: (
-    null: (13px, 1.6),
+    null: (13px, 1.5),
     md: (16px)
   ),
 
   lg: (
-    null: (20px, 1.6),
+    null: (20px, 1.5),
     md: (24px),
   ),
 
   headline--default: (
-    null: (29px, 1.2),
-    md: (36px),
+    null: (30px, 1.2),
+    md: (40px),
   ),
 
   headline--sm: (

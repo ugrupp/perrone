@@ -6,8 +6,22 @@
     {{/* Content */}}
     <div class="c-features__content">
       <div class="o-container">
-        <div class="c-richtext c-richtext--inverted">
-          <p>Features</p>
+        <div class="c-features__cols">
+          {{/* Title col */}}
+          <div class="c-features__col c-features__col--title">
+            <h2 class="c-headline">{{ $features.Params.title }}</h2>
+          </div>
+
+          {{/* Features col */}}
+          <div class="c-features__col c-features__col--features">
+            <div class="c-richtext c-richtext--inverted">
+              <ul>
+                {{ range $features.Params.features }}
+                  <li>{{ .title }}</li>
+                {{ end }}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
