@@ -73,3 +73,10 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+// overlaps
+.o-main__section--overlap-top {
+  &::before {
+    top: rem(-$overlap-size);
+  }
+}

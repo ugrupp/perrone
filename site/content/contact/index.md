@@ -8,13 +8,13 @@ Freiburger Landstraße 13
 **Fax** 07664 3716  
 [info@autohaus-perrone.de](mailto:info@autohaus-perrone.de)
 
-{{< headline level="3" class="c-headline--sm" title="Reparaturen" >}}
+{{< headline level="3" class="c-headline--sm c-headline--richtext" title="Reparaturen" >}}
 
 Montag bis Freitag  
 8.00 Uhr - 12.30 Uhr  
 14.00 Uhr - 17.00 Uhr
 
-{{< headline level="3" class="c-headline--sm" title="Verkauf" >}}
+{{< headline level="3" class="c-headline--sm c-headline--richtext" title="Verkauf" >}}
 
 Montag bis Freitag  
 9.00 Uhr - 12.00 Uhr  

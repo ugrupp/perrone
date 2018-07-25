@@ -3,13 +3,7 @@
   {{ with .Site.GetPage "page" "home" }}
     <div class="o-main__content" id="content">
       {{/* Intro */}}
-      <section class="o-main__section o-main__section--bg-light" id="autohaus">
-        <div class="o-container">
-          <div class="c-richtext">
-            <p>Intro</p>
-          </div>
-        </div>
-      </section>
+      {{ partial "sections/intro.html" . }}
 
       {{/* Features */}}
       {{ partial "sections/features.html" . }}

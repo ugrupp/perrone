@@ -41,7 +41,7 @@
     }
   }
 
-  .c-headline + p {
+  .c-headline--richtext + p {
     margin-top: rem(-20px);
   }
 
@@ -56,9 +56,7 @@
   }
 
   em {
-    @include font-ci;
     color: $color-content-ci;
-    font-style: italic;
   }
 
   ul {
