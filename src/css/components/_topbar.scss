@@ -2,6 +2,9 @@
 // Topbar
 // --------------------------------------------------
 
+$topbar-height-top: 215px;
+$topbar-height-not-top: $pagelayout-y-gutter;
+
 .c-topbar {
   position: fixed;
   top: 0;
@@ -9,7 +12,7 @@
   right: 0;
   z-index: index($z-index, topbar);
 
-  height: rem($logo-size);
+  height: rem($topbar-height-top);
 
   @include mappy-bp(sm) {
     left: $pagelayout-gutter-sm;
@@ -31,12 +34,6 @@
   }
 }
 
-.c-topbar__inner {
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-}
-
 // Headroom modifiers
 .c-topbar--headroom-initialized {
   transition: all $transition-time-medium;
@@ -44,41 +41,53 @@
 
 .c-topbar--unpinned {
   transform: translateY(-100%);
+  opacity: 0;
 }
 
 .c-topbar--not-top {
-  height: rem($pagelayout-y-gutter);
-  background-color: $color-content-ci;
+  height: rem($topbar-height-not-top);
+}
+
+.c-topbar--not-top.c-topbar--pinned {
+  background-color: rgba($color-content-ci, .9);
+}
+
+
+.c-topbar__inner {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  .c-topbar--not-top & {
+    align-items: center;
+  }
 }
 
 // Menu wrapper
 .c-topbar__menu {
   margin-left: auto;
-
-  .c-topbar--not-top & {
-    padding-bottom: rem(30px);
-  }
 }
 
 // Logo
+$logo-height: 200px;
+$logo-width: 224px;
+
 .c-topbar__logo {
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 100%;
+  overflow: hidden;
+  margin-right: rem(20px);
+  display: flex;
 
-  transition: all $transition-time-medium;
+  img {
+    margin-top: auto;
+    display: block;
+    height: rem($logo-height);
+    width: rem($logo-width);
+    transition: all $transition-time-medium;
+    transform-origin: top center;
 
-  display: block;
-  height: rem($logo-size);
-  width: rem($logo-size);
-
-  @include mappy-bp(md) {
-    height: rem($logo-size-md);
-    width: rem($logo-size-md);
-  }
-
-  svg {
-    height: 100%;
-    width: 100%;
+    .c-topbar--not-top & {
+      transform: scale(.675);
+    }
   }
 }

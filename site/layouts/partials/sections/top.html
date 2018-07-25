@@ -1,13 +1,10 @@
-<div class='c-topbar' data-topbar>
+<div class="c-topbar" data-topbar>
   <div class="o-container">
     <div class="c-topbar__inner">
       {{/* Logo */}}
-      <div class="c-topbar__logo-wrapper">
-        <a href='{{ "/" | relLangURL }}' class="c-topbar__logo">
-          {{ partial "components/svg" (dict "svg" "logo") }}
-          <span class="u-invisible">Hotel &amp; Restaurant Peterle</span>
-        </a>
-      </div>
+      <a href='{{ "/" | relLangURL }}' class="c-topbar__logo">
+        <img src="/images/layout/logo.svg" alt="Hotel &amp; Restaurant Peterle" />
+      </a>
 
       {{/* Menu */}}
       <div class="c-topbar__menu">
