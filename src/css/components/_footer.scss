@@ -57,7 +57,7 @@ $footer-padding: 100px;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 55% 71%;
+  object-position: center center;
   transition: all $transition-time-long;
 
   &.lazyload,
@@ -71,12 +71,73 @@ $footer-padding: 100px;
 .c-footer__content {
   position: relative;
   z-index: index($z-index, footer) + 10; // > bg
+
   color: $color-white;
   @include font-smoothing;
+  @include typi('footer');
 }
 
-.c-footer__meta {
+.c-footer__content-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include font-ci;
+}
+
+// Meta & Credit
+.c-footer__cols {
+  @include mappy-bp(sm) {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.c-footer__meta-item {
+  & + & {
+    margin-top: rem(10px);
+  }
+}
+
+.c-footer__meta-link,
+.c-footer__credit a {
+  color: inherit;
+  transition: opacity $transition-time-default;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
+}
+
+// Credit
+.c-footer__credit {
+  margin-top: rem(10px);
+
+  @include mappy-bp(sm) {
+    margin-top: 0;
+    margin-left: rem(100px);
+  }
+
+  @include mappy-bp(md) {
+    margin-top: 0;
+    margin-left: rem(215px);
+  }
+}
+
+// Scroll up
+.c-footer__scroll-up {
+  margin-left: rem(30px);
+  display: block;
+  transition: opacity $transition-time-default;
+
+  &:hover,
+  &:focus {
+    opacity: $hover-opacity;
+  }
+
+  svg {
+    height: rem(42px);
+    width: rem(42px);
+  }
 }

@@ -5,15 +5,14 @@
   {{/* BG Image */}}
   <div class="c-footer__img-wrapper">
     {{ with $footer.Resources.GetMatch "background.jpg" }}
-      {{ $imageSmall := .Resize "500x" }}
-      {{ $imageMedium := .Resize "1000x" }}
+      {{ $imageSmall := .Resize "1000x" }}
       {{ $imageBig := .Resize "2000x" }}
 
       <img
         alt="Footer"
         src="{{ $imageSmall.RelPermalink }}"
         srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-        data-srcset="{{ $imageSmall.RelPermalink }} 500w, {{ $imageMedium.RelPermalink }} 1000w, {{ $imageBig.RelPermalink }} 2000w"
+        data-srcset="{{ $imageSmall.RelPermalink }} 1000w {{ $imageBig.RelPermalink }} 2000w"
         data-sizes="auto"
         class="c-footer__img lazyload" />
     {{ end }}
@@ -22,21 +21,25 @@
   {{/* Content */}}
   <div class="c-footer__content">
     <div class="o-container">
-      {{/* Meta bar */}}
-      <div class="c-footer__meta">
-        {{/* footer meta menu */}}
-        <ul class="c-meta-menu c-meta-menu--horizontal">
-          <li class="c-meta-menu__item">
-            <a class="c-meta-menu__link" href="#">Impressum</a>
-          </li>
-          <li class="c-meta-menu__item">
-            <a class="c-meta-menu__link" href="#">Datenschutz</a>
-          </li>
-        </ul>
+      <div class="c-footer__content-inner">
+        <div class="c-footer__cols">
+          {{/* Meta menu */}}
+          <ul class="c-footer__meta">
+            <li class="c-footer__meta-item">
+              <a class="c-footer__meta-link" href="#">Impressum</a>
+            </li>
+            <li class="c-footer__meta-item">
+              <a class="c-footer__meta-link" href="#">Datenschutz</a>
+            </li>
+          </ul>
+
+          {{/* Credit */}}
+          <p class="c-footer__credit">eine website von <a href="https://www.creativelinx.de">www.creativelinx.de</a></p>
+        </div>
 
         {{/* Toplink */}}
-        <a href="#start" class="c-scroll-hint c-scroll-hint--inverted c-scroll-hint--up c-scroll-hint--align-right" data-scroll-top>
-          {{ partial "components/svg" (dict "svg" "pfeil") }}
+        <a href="#start" class="c-footer__scroll-up" data-scroll-top>
+          {{ partial "components/svg" (dict "svg" "top") }}
           <span class="u-invisible">Nach oben</span>
         </a>
       </div>

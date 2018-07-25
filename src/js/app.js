@@ -16,6 +16,7 @@ import './modules/fontfaceobserver';
 import './modules/topbar';
 import './modules/reveal-animations';
 import './modules/gmap';
+import './modules/scroll-to';
 
 import Menu from './modules/menu';
 
