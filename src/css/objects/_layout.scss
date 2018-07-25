@@ -80,3 +80,9 @@
     top: rem(-$overlap-size);
   }
 }
+
+.o-main__section--overlap-bottom {
+  &::before {
+    bottom: rem(-$overlap-size);
+  }
+}

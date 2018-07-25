@@ -8,10 +8,9 @@ $footer-padding: 100px;
   position: relative;
   z-index: index($z-index, footer);
 
-  padding-top: rem($footer-padding * 2);
+  padding-top: rem($footer-padding + $overlap-size);
   padding-bottom: rem($footer-padding);
 
-  &::after,
   &::before {
     content: '';
     position: absolute;
@@ -20,11 +19,7 @@ $footer-padding: 100px;
     right: 0;
     bottom: 0;
     z-index: index($z-index, footer) + 1;
-  }
 
-  // red overlay
-  &::after {
-    top: $footer-padding;
     background-color: $color-content-ci;
     opacity: .7;
 
@@ -32,13 +27,6 @@ $footer-padding: 100px;
       opacity: 1;
       mix-blend-mode: multiply;
     }
-  }
-
-  // grey overlay
-  &::before {
-    bottom: calc(100% - #{$footer-padding});
-    background-color: $color-gray-f;
-    opacity: .9;
   }
 }
 
