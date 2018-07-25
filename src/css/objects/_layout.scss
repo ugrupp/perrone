@@ -39,13 +39,28 @@
 
 // default section
 .o-main__section {
+  position: relative;
+  z-index: index($z-index, content-section);
+
   background-color: $color-white;
   @include section-padding;
+
+  > * {
+    position: relative;
+  }
 }
 
 // light bg color
 .o-main__section--bg-light {
-  background-color: $color-gray-f;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba($color-gray-f, .9);
+  }
 }
 
 // ci bg color
