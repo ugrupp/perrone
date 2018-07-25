@@ -5,7 +5,7 @@
   "repository": "ugrupp/perrone",
   "main": "gulpfile.js",
   "author": "Urs Grupp, 21sieben",
-  "homepage": "https://www.hotel-peterle.de/",
+  "homepage": "https://www.autohaus-perrone.de/",
   "license": "GPL-3.0",
   "dependencies": {
     "autoprefixer": "^8.3.0",

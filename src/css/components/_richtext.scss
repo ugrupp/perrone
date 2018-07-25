@@ -30,7 +30,8 @@
   }
 
   p,
-  table {
+  table,
+  .c-headline {
     &:not(:last-child) {
       margin-bottom: rem(30px);
     }
@@ -40,9 +41,12 @@
     }
   }
 
+  .c-headline + p {
+    margin-top: rem(-20px);
+  }
+
   a {
     color: inherit;
-    border-bottom: 1px solid currentColor;
     transition: all $transition-time-default;
 
     &:hover,

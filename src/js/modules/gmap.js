@@ -163,15 +163,15 @@ let mapStyles = [
 
 function initMap() {
   if (typeof window.google !== 'undefined') {
-    let peterle = {
-      lat: 47.86274,
-      lng: 8.11737,
+    let perrone = {
+      lat: 47.982049,
+      lng: 7.718937,
     };
 
-    let map = new window.google.maps.Map(document.getElementById('footer-map'), {
-      zoom: 17,
+    let map = new window.google.maps.Map(document.getElementById('contact-map'), {
+      zoom: 15,
       styles: mapStyles,
-      center: peterle,
+      center: perrone,
       zoomControl: true,
       mapTypeControl: false,
       streetViewControl: false,
@@ -180,8 +180,8 @@ function initMap() {
     });
 
     new window.google.maps.Marker({
-      position: peterle,
-      title: 'Schuppenhörnlestraße 18',
+      position: perrone,
+      title: 'Freiburger Landstraße 13',
       map: map,
       icon: {
         path: 'M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z',
