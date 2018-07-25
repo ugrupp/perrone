@@ -1,0 +1,3 @@
+# Redirect default Netlify subdomain to primary domain
+# http://autohaus-perrone.netlify.com/* https://www.autohaus-perrone.de/:splat 301!
+# https://autohaus-perrone.netlify.com/* https://www.autohaus-perrone.de/:splat 301!

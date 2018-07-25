@@ -1,0 +1,84 @@
+//
+// Topbar
+// --------------------------------------------------
+
+.c-topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: index($z-index, topbar);
+
+  height: rem($logo-size);
+
+  @include mappy-bp(sm) {
+    left: $pagelayout-gutter-sm;
+    right: $pagelayout-gutter-sm;
+  }
+
+  @include mappy-bp(md) {
+    left: $pagelayout-gutter-md;
+    right: $pagelayout-gutter-md;
+  }
+
+  @include mappy-bp(lg) {
+    left: $pagelayout-gutter-lg;
+    right: $pagelayout-gutter-lg;
+  }
+
+  .o-container {
+    height: 100%;
+  }
+}
+
+.c-topbar__inner {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+// Headroom modifiers
+.c-topbar--headroom-initialized {
+  transition: all $transition-time-medium;
+}
+
+.c-topbar--unpinned {
+  transform: translateY(-100%);
+}
+
+.c-topbar--not-top {
+  height: rem($pagelayout-y-gutter);
+  background-color: $color-content-ci;
+}
+
+// Menu wrapper
+.c-topbar__menu {
+  margin-left: auto;
+
+  .c-topbar--not-top & {
+    padding-bottom: rem(30px);
+  }
+}
+
+// Logo
+.c-topbar__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: all $transition-time-medium;
+
+  display: block;
+  height: rem($logo-size);
+  width: rem($logo-size);
+
+  @include mappy-bp(md) {
+    height: rem($logo-size-md);
+    width: rem($logo-size-md);
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}

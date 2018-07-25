@@ -1,0 +1,59 @@
+//
+// Typography settings
+// --------------------------------------------------
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// Font Families
+$font-family-base-fallback: 'Arial', sans-serif;
+$font-family-base: 'Overpass', 'Arial', sans-serif;
+$font-family-ci-fallback: 'Arial Narrow', serif;
+$font-family-ci: 'BigNoodleTitling', 'Arial Narrow', serif;
+
+// Tell Typi to use mappy-breakpoints
+$typi-breakpoint: mappy-bp;
+
+// Font Sizing
+/* stylelint-disable value-list-max-empty-lines */
+$typi: (
+  // Base for <html>, will be inherited
+  base: (
+    null: (16px, 1.6)
+  ),
+
+  richtext: (
+    null: (16px, 1.6),
+    md: (20px)
+  ),
+
+  sm: (
+    null: (13px, 1.6),
+    md: (16px)
+  ),
+
+  lg: (
+    null: (20px, 1.6),
+    md: (24px),
+  ),
+
+  headline--default: (
+    null: (29px, 1.2),
+    md: (36px),
+  ),
+
+  headline--sm: (
+    null: (24px, 1.2),
+    md: (30px),
+  ),
+
+  menu: (
+    null: (28px, 1.2),
+  ),
+
+  button: (
+    null: (18px, 1.2),
+  ),
+);
+/* stylelint-enable */

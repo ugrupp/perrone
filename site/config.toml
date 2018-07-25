@@ -1,0 +1,12 @@
+baseurl = "/"
+DefaultContentLanguage = "de"
+title = "Autohaus Perrone"
+
+enableRobotsTXT = true
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[languages]
+  [languages.de]
+    weight = 1
+
+[params]

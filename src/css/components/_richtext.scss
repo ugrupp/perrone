@@ -1,0 +1,88 @@
+//
+// Richtext
+// --------------------------------------------------
+
+.c-richtext {
+  @include typi(richtext);
+  color: $color-content;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    &:not(:first-child) {
+      margin-bottom: 4em;
+    }
+
+    &:not(:last-child) {
+      margin-top: 4em;
+    }
+  }
+
+  strong {
+    color: $color-content-ci;
+    font-weight: $font-weight-bold;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  p,
+  table {
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+
+  a {
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+    transition: all $transition-time-default;
+
+    &:hover,
+    &:focus {
+      color: $color-content-ci;
+    }
+  }
+
+  em {
+    @include font-ci;
+    color: $color-content-ci;
+    font-style: italic;
+  }
+
+  .c-headline {
+    color: $color-content-ci;
+  }
+}
+
+.c-richtext--inverted {
+  &,
+  strong,
+  .c-headline,
+  em,
+  a:hover,
+  a:focus {
+    color: $color-white;
+  }
+
+  a:hover,
+  a:focus {
+    opacity: .5;
+  }
+}
+
+.c-richtext--lg {
+  @include typi(lg);
+}
+
+
+.c-richtext--sm {
+  @include typi(sm);
+}

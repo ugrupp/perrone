@@ -1,0 +1,44 @@
+//
+// General settings
+// --------------------------------------------------
+
+// Breakpoints
+$breakpoints: (
+  'xs': 480px,
+  'sm': 768px,
+  'md': 1025px,
+  'lg': 1200px,
+  'xl': 1400px
+);
+
+$bp-menu-collapse: md;
+$bp-grid-collapse: sm;
+
+// Transition timing
+$transition-time-default: .2s;
+$transition-time-medium: .4s;
+$transition-time-long: .8s;
+
+// z-index indexes
+$z-index: hero, content, main, footer, topbar, menu;
+
+// Sizes & other variables
+$pagelayout-gutter-sm: 30px;
+$pagelayout-gutter-md: 50px;
+$pagelayout-gutter-lg: 100px;
+
+$pagelayout-y-gutter: 100px;
+
+$container-gutter: 30px;
+$container-width-default: 1200px;
+$container-width-narrow: 1200px;
+
+$grid-gutter: 60px;
+
+$hero-height: 350px;
+$hero-height-md: 700px;
+
+$logo-size: 200px;
+$logo-size-md: 225px;
+
+$bottom-offset-default: 42px;
