@@ -56,7 +56,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: 18% 75%; // totally based on the car hero image
   transition: all $transition-time-long;
 
   &.lazyload,
