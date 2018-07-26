@@ -82,9 +82,14 @@ $contact-signet-size: 153px;
 }
 
 // Avatar
+.c-contact__avatar-headline {
+  position: relative;
+  z-index: 10; // > image while lazyloading
+}
+
 .c-contact__avatar {
-  .c-headline + & {
-    margin-top: rem(15px);
+  .c-contact__avatar-headline + & {
+    margin-top: rem(-35px);
   }
 }
 
@@ -111,7 +116,5 @@ $contact-signet-size: 153px;
 }
 
 .c-contact__avatar-text {
-  position: relative;
-  z-index: 10; // > image while lazyloading
-  margin-top: rem(-40px);
+  margin-top: rem(15px);
 }

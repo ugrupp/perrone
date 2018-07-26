@@ -26,7 +26,7 @@
           {{/* Avatar col */}}
           <div class="c-contact__col">
             {{ with $contact.Resources.GetMatch "avatar*.md" }}
-              <h3 class="c-headline c-headline--sm c-headline--ci">{{ .Params.title }}</h3>
+              <h3 class="c-headline c-headline--sm c-headline--ci c-contact__avatar-headline">{{ .Params.title }}</h3>
 
               {{/* Avatar */}}
               <div class="c-contact__avatar">
