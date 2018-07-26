@@ -6,10 +6,9 @@
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: $pagelayout-y-gutter;
   top: $pagelayout-y-gutter;
   z-index: index($z-index, hero);
-  height: $hero-height;
 
   @include mappy-bp(sm) {
     left: $pagelayout-gutter-sm;
@@ -17,8 +16,6 @@
   }
 
   @include mappy-bp(md) {
-    height: $hero-height-md;
-
     left: $pagelayout-gutter-md;
     right: $pagelayout-gutter-md;
   }

@@ -25,11 +25,7 @@
 
 // Main (content wrapper)
 .o-main {
-  padding-top: $hero-height;
-
-  @include mappy-bp(md) {
-    padding-top: $hero-height-md;
-  }
+  padding-top: calc(100vh - #{$pagelayout-y-gutter * 2});
 }
 
 .o-main__content {
