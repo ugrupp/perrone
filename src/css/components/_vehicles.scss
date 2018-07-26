@@ -40,6 +40,18 @@
     height: rem(430px);
     width: rem(430px);
   }
+
+  svg {
+    transform: translate3d(0, 0, 0);
+    animation: pulse 1.25s infinite cubic-bezier(.66, 0, 0, 1);
+  }
+}
+
+// Pulse animation
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 // Background
