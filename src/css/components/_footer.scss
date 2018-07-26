@@ -68,7 +68,7 @@ $footer-padding: 100px;
 .c-footer__content-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 
   @include font-ci;
 }
