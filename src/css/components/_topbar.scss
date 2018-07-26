@@ -3,7 +3,7 @@
 // --------------------------------------------------
 
 $topbar-height-top: 215px;
-$topbar-height-not-top: $pagelayout-y-gutter;
+$topbar-height-compact: $pagelayout-y-gutter;
 
 .c-topbar {
   position: fixed;
@@ -36,7 +36,8 @@ $topbar-height-not-top: $pagelayout-y-gutter;
 
 // Headroom modifiers
 .c-topbar--headroom-initialized {
-  transition: all $transition-time-medium;
+  transition-property: transform, opacity, background-color;
+  transition-duration: $transition-time-medium;
 }
 
 .c-topbar--unpinned {
@@ -44,11 +45,9 @@ $topbar-height-not-top: $pagelayout-y-gutter;
   opacity: 0;
 }
 
-.c-topbar--not-top {
-  height: rem($topbar-height-not-top);
-}
 
-.c-topbar--not-top.c-topbar--pinned {
+.c-topbar--compact {
+  height: rem($topbar-height-compact);
   background-color: rgba($color-content-ci, .9);
 }
 
@@ -58,7 +57,7 @@ $topbar-height-not-top: $pagelayout-y-gutter;
   display: flex;
   align-items: flex-end;
 
-  .c-topbar--not-top & {
+  .c-topbar--compact & {
     align-items: center;
   }
 }
@@ -69,6 +68,7 @@ $topbar-height-not-top: $pagelayout-y-gutter;
 }
 
 // Logo
+$logo-xs-shrink-factor: .8;
 $logo-height: 200px;
 $logo-width: 224px;
 
@@ -77,17 +77,27 @@ $logo-width: 224px;
   overflow: hidden;
   margin-right: rem(20px);
   display: flex;
+  flex-shrink: 0;
 
   img {
     margin-top: auto;
     display: block;
-    height: rem($logo-height);
-    width: rem($logo-width);
-    transition: all $transition-time-medium;
+    height: rem($logo-height * $logo-xs-shrink-factor);
+    width: rem($logo-width * $logo-xs-shrink-factor);
+    transition: all $transition-time-default;
     transform-origin: top center;
 
-    .c-topbar--not-top & {
-      transform: scale(.675);
+    @include mappy-bp(xs) {
+      height: rem($logo-height);
+      width: rem($logo-width);
+    }
+
+    .c-topbar--compact & {
+      transform: scale(.675 / $logo-xs-shrink-factor);
+
+      @include mappy-bp(xs) {
+        transform: scale(.675);
+      }
     }
   }
 }

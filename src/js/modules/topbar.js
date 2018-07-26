@@ -1,34 +1,50 @@
 import Headroom from 'headroom.js';
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  let topbar = document.querySelector('[data-topbar]');
-  let hero = document.querySelector('[data-hero]');
+export default class Topbar {
+  constructor() {
+    document.addEventListener('DOMContentLoaded', (event) => {
+      this.topbar = document.querySelector('[data-topbar]');
 
-  if (topbar) {
-    // Scroll behavior
-    let headroom = new Headroom(topbar, {
-      // vertical offset in px before element is first unpinned
-      offset: hero ? hero.offsetHeight / 2 : topbar.offsetHeight,
-      // scroll tolerance in px before state changes
-      tolerance: 5,
-      classes: {
-        // when element is initialised
-        initial: 'c-topbar--headroom-initialized',
-        // when scrolling up
-        pinned: 'c-topbar--pinned',
-        // when scrolling down
-        unpinned: 'c-topbar--unpinned',
-        // when above offset
-        top: 'c-topbar--top',
-        // when below offset
-        notTop: 'c-topbar--not-top',
-        // when at bottom of scoll area
-        bottom: 'c-topbar--bottom',
-        // when not at bottom of scroll area
-        notBottom: 'c-topbar--not-bottom',
-      },
+      if (this.topbar) {
+        // Headroom
+        let headroom = new Headroom(this.topbar, {
+          // vertical offset in px before element is first unpinned
+          offset: 350 - 100, // XS hero height - pagelayout offset height
+          // scroll tolerance in px before state changes
+          tolerance: 0,
+          classes: {
+            // when element is initialised
+            initial: 'c-topbar--headroom-initialized',
+            // when scrolling up
+            pinned: 'c-topbar--pinned',
+            // when scrolling down
+            unpinned: 'c-topbar--unpinned',
+            // when above offset
+            top: 'c-topbar--top',
+            // when below offset
+            notTop: 'c-topbar--not-top',
+            // when at bottom of scoll area
+            bottom: 'c-topbar--bottom',
+            // when not at bottom of scroll area
+            notBottom: 'c-topbar--not-bottom',
+          },
+        });
+
+        headroom.init();
+
+        // update topbar mode (normal/compact)
+        window.addEventListener('scroll', this.updateTopbarMode.bind(this), false);
+        this.updateTopbarMode();
+      }
     });
-
-    headroom.init();
   }
-});
+
+  updateTopbarMode() {
+    if (window.pageYOffset >= 100) {
+      this.topbar.classList.add('c-topbar--compact');
+    } else {
+      this.topbar.classList.remove('c-topbar--compact');
+    }
+  }
+
+}
