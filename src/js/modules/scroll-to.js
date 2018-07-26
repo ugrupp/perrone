@@ -5,4 +5,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     speed: 750,
     easing: 'easeOutQuad',
   });
+
+  new SmoothScroll('[data-scroll-menu]', {
+    speed: 750,
+    easing: 'easeOutQuad',
+    offset: 100, // topbar height
+  });
 });

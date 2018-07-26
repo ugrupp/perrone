@@ -12,7 +12,7 @@
       {{ $currentPage := . }}
       {{ range (slice "autohaus" "leistungen" "fahrzeuge" "kontakt") }}
         <li>
-          <a href="/#{{ . }}">
+          <a href="/#{{ . }}" data-scroll-menu>
             {{ humanize . }}
           </a>
         </li>
