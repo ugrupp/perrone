@@ -31,13 +31,15 @@ $pagelayout-y-gutter: 100px;
 
 $container-gutter: 30px;
 $container-width-default: 1200px;
-$container-width-narrow: 1200px;
+$container-width-narrow: 800px;
 
 $grid-gutter: 100px;
 
 $hero-height: 350px;
 $hero-height-md: 800px;
 
-$hover-opacity: .85;
+$hover-opacity: .75;
 
 $overlap-size: 100px;
+
+$overlay-bg: rgba($color-content-ci, .9);

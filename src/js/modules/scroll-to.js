@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     easing: 'easeOutQuad',
   });
 
-  new SmoothScroll('[data-scroll-menu]', {
+  new SmoothScroll('[data-menu-link]', {
     speed: 750,
     easing: 'easeOutQuad',
     offset: 100, // topbar height

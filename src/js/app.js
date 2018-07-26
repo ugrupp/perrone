@@ -21,5 +21,5 @@ import Menu from './modules/menu';
 import Topbar from './modules/topbar';
 
 // init modules
-new Topbar();
-new Menu();
+let menu = new Menu();
+new Topbar(menu);

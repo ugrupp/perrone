@@ -1,8 +1,9 @@
 import Headroom from 'headroom.js';
 
 export default class Topbar {
-  constructor() {
+  constructor(menu) {
     document.addEventListener('DOMContentLoaded', (event) => {
+      this.menu = menu;
       this.topbar = document.querySelector('[data-topbar]');
 
       if (this.topbar) {
@@ -28,6 +29,9 @@ export default class Topbar {
             // when not at bottom of scroll area
             notBottom: 'c-topbar--not-bottom',
           },
+          onUnpin: () => {
+            this.menu && this.menu.close();
+          }
         });
 
         headroom.init();

@@ -9,6 +9,7 @@ export default class Menu {
       if (this.el) {
         this.inited = true;
         this.togglers = [...document.querySelectorAll('[data-menu-toggler]')];
+        this.links = [...this.el.querySelectorAll('[data-menu-link]')];
       } else {
         console.error('Error: Menu could not be initialized.'); // eslint-disable-line no-console
         return this;
@@ -16,7 +17,10 @@ export default class Menu {
 
       this.initTogglers();
       this.initOutsideClick();
+      this.initCloseOnLinkClick();
     });
+
+    return this;
   }
 
   // Helper method to determine if overlay has been inited. Should be called by all public methods.
@@ -51,24 +55,35 @@ export default class Menu {
     });
   }
 
-  // Toggles overlay.
+  // close overlay when link has been clicked
+  initCloseOnLinkClick() {
+    this.links.forEach((link) => {
+      link.addEventListener('click', () => {
+        this.close();
+      });
+    });
+  }
+
+  // Toggles overlay
   toggle() {
     if (this.isInited()) {
       this.el.classList.contains('is-open') ? this.close() : this.open();
     }
   }
 
-  // Opens overlay.
+  // Opens overlay
   open() {
     if (this.isInited()) {
       this.el.classList.add('is-open');
+      document.body.classList.add('is-menu-open');
     }
   }
 
-  // Closes overlay.
+  // Closes overlay
   close() {
     if (this.isInited()) {
       this.el.classList.remove('is-open');
+      document.body.classList.remove('is-menu-open');
     }
   }
 }

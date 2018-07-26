@@ -29,7 +29,13 @@ $topbar-height-compact: $pagelayout-y-gutter;
     right: $pagelayout-gutter-lg;
   }
 
-  .o-container {
+  .is-menu-open & {
+    @include mappy-bp(max $bp-menu-collapse) {
+      background-color: $overlay-bg;
+    }
+  }
+
+  > .o-container {
     height: 100%;
   }
 }
@@ -48,7 +54,7 @@ $topbar-height-compact: $pagelayout-y-gutter;
 
 .c-topbar--compact {
   height: rem($topbar-height-compact);
-  background-color: rgba($color-content-ci, .9);
+  background-color: $overlay-bg;
 }
 
 

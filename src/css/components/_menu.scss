@@ -55,21 +55,26 @@
   right: 0;
   top: 100%;
   height: calc(100vh - 100%); // viewport height - topbar height
+  background-color: $overlay-bg;
 
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  padding-top: rem(110px);
+  padding-top: rem(50px);
   padding-bottom: rem(50px);
-  background-color: rgba(255, 255, 255, .95);
 
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity, visibility;
+  transition-duration: $transition-time-medium;
 
   .is-open & {
-    display: block;
+    opacity: 1;
+    visibility: visible;
   }
 
   @include mappy-bp($bp-menu-collapse) {
-    display: block;
+    opacity: 1;
+    visibility: visible;
     position: static;
     background-color: transparent;
     height: auto;
@@ -79,7 +84,14 @@
 }
 
 .c-menu__main {
+  margin-left: rem(51px * $logo-xs-shrink-factor); // align with logo
+
+  @include mappy-bp(xs) {
+    margin-left: rem(51px); // align with logo
+  }
+
   @include mappy-bp($bp-menu-collapse) {
+    margin-left: 0;
     display: flex;
   }
 
@@ -102,7 +114,7 @@
   }
 
   li + li {
-    margin-top: rem(20px);
+    margin-top: rem(30px);
 
     @include mappy-bp($bp-menu-collapse) {
       margin-top: 0;
@@ -120,11 +132,12 @@
     @include font-ci;
     color: $color-white;
     @include font-smoothing;
+    transition: color $transition-time-default;
 
     &:hover,
     &:focus,
     &.active {
-      color: $color-white;
+      color: rgba($color-white, $hover-opacity);
     }
   }
 }
