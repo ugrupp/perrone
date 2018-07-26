@@ -5,11 +5,8 @@
 .c-menu__toggler {
   display: block;
   position: relative;
-  width: rem(40px);
-  height: rem(40px);
-
-  // align toggler with bottom edge of logo
-  transform: translateY(rem(7px));
+  width: rem(42px);
+  height: rem(42px);
 
   @include mappy-bp($bp-menu-collapse) {
     display: none;
