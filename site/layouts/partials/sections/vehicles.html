@@ -6,10 +6,10 @@
     <div class="o-container">
       <div class="c-vehicles__cols">
         {{/* Title col */}}
-        <div class="c-vehicles__title">
+        <a href="{{ $vehicles.Params.link }}" class="c-vehicles__title">
           <h2 class="c-headline c-headline--secondary">{{ $vehicles.Params.title1 }}</h2>
           <p class="c-headline">{{ $vehicles.Params.title2 }}</p>
-        </div>
+        </a>
 
         {{/* Link col */}}
         <a href="{{ $vehicles.Params.link }}" target="_blank" class="c-vehicles__link">
