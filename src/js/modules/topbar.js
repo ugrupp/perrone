@@ -31,7 +31,7 @@ export default class Topbar {
           },
           onUnpin: () => {
             this.menu && this.menu.close();
-          }
+          },
         });
 
         headroom.init();
@@ -50,5 +50,4 @@ export default class Topbar {
       this.topbar.classList.remove('c-topbar--compact');
     }
   }
-
 }

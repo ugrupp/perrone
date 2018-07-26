@@ -19,7 +19,9 @@ import './modules/scroll-to';
 
 import Menu from './modules/menu';
 import Topbar from './modules/topbar';
+import Overlays from './modules/overlays';
 
 // init modules
 let menu = new Menu();
 new Topbar(menu);
+new Overlays();
