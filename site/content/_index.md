@@ -1,4 +1,4 @@
 ---
 title: Startseite
-description: Ihr persönliches, kleines Familienhotel inmitten des Naturparks Südschwarzwald
+description: Ihr Autohaus in Freiburg-Tiengen - Wir bieten KFZ-Reparaturen, Wartung, Instandsetzung, HU/AU, Frontscheibenreparatur sowie Verkauf von Jahres- und Gebrauchtwagen.
 ---

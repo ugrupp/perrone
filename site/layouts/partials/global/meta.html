@@ -1,12 +1,39 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
-{{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+<meta name="robots" content="index,follow"/>
 {{ .Hugo.Generator }}
 
 {{/* Title */}}
-<title>{{- with .Title }}{{ . }} / {{ end }}{{ .Site.Title -}}{{- with .Params.subtitle }} / {{ . | plainify }}{{ end }}</title>
+{{ define "site_title" }}{{ .Site.Title | upper -}}{{ end }}
+<title>{{ block "site_title" . }}{{ end }}</title>
+<meta itemprop="name" content='{{ block "site_title" . }}{{ end }}' />
+<meta property="og:title" content='{{ block "site_title" . }}{{ end }}' />
+
+{{/* Description */}}
+{{ with .Description }}
+<meta name="description" content="{{ . }}">
+<meta itemprop="description" content="{{ . }}" />
+<meta name="og:description" content="{{ . }}">
+{{ end }}
+
+<meta name="keywords" content="Autohaus, Perrone, KFZ-Reparaturen, Reparaturen, Wartung, Auspuff, Bremsen, Ölservice, Unfallreparaturen, Instandsetzung, Hauptuntersuchung, HU, Abgasuntersuchung, AU, Frontscheibenreparatur, Jahreswagen, Gebrauchtwagen">
+
+{{/* Remaining og tags */}}
+<meta property="og:locale" content="{{ $.Site.Params.locale }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.autohaus-perrone.de/" />
+<meta property="og:site_name" content="{{ .Site.Title -}}" />
+<meta property="og:latitude" content="47.982049" />
+<meta property="og:longitude" content="7.718937" />
+<meta property="og:street_address" content="Freiburger Landstraße 13" />
+<meta property="og:region" content="Baden-W&uuml;rttemberg" />
+<meta property="og:locality" content="Freiburg" />
+<meta property="og:postal_code" content="79112" />
+<meta property="og:country_name" content="Deutschland/Germany" />
+<meta property="og:phone_number" content="07664 3715" />
+<meta property="article:tag" content="Autohaus, Perrone, KFZ-Reparaturen, Reparaturen, Wartung, Auspuff, Bremsen, Ölservice, Unfallreparaturen, Instandsetzung, Hauptuntersuchung, HU, Abgasuntersuchung, AU, Frontscheibenreparatur, Jahreswagen, Gebrauchtwagen" />
 
 {{/* Favicon */}}
 {{/* TODO */}}
+
