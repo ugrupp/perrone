@@ -24,9 +24,14 @@ $contact-signet-size: 153px;
   }
 
   img {
-    height: rem($contact-signet-size);
-    width: rem($contact-signet-size);
+    height: rem($contact-signet-size * $logo-xs-shrink-factor);
+    width: rem($contact-signet-size * $logo-xs-shrink-factor);
     transform: translateX(rem(-14px));
+
+    @include mappy-bp(md) {
+      height: rem($contact-signet-size);
+      width: rem($contact-signet-size);
+    }
   }
 }
 
