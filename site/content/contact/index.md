@@ -1,5 +1,6 @@
 ---
 headless: true
+title: Kontakt
 ---
 
 Freiburger Landstraße 13  
