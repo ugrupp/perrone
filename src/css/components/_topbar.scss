@@ -11,6 +11,7 @@ $topbar-height-compact: $pagelayout-y-gutter;
   left: 0;
   right: 0;
   z-index: index($z-index, topbar);
+  opacity: 0;
 
   height: rem($topbar-height-top);
 
@@ -42,6 +43,7 @@ $topbar-height-compact: $pagelayout-y-gutter;
 
 // Headroom modifiers
 .c-topbar--headroom-initialized {
+  opacity: 1;
   transition-property: transform, opacity, background-color;
   transition-duration: $transition-time-medium;
 }
