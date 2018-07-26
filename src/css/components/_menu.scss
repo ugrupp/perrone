@@ -5,8 +5,8 @@
 .c-menu__toggler {
   display: block;
   position: relative;
-  width: rem(42px);
-  height: rem(42px);
+  width: rem(44px);
+  height: rem(44px);
 
   @include mappy-bp($bp-menu-collapse) {
     display: none;
@@ -81,14 +81,7 @@
 }
 
 .c-menu__main {
-  margin-left: rem(51px * $logo-xs-shrink-factor); // align with logo
-
-  @include mappy-bp(xs) {
-    margin-left: rem(51px); // align with logo
-  }
-
   @include mappy-bp($bp-menu-collapse) {
-    margin-left: 0;
     display: flex;
   }
 

@@ -91,7 +91,7 @@ $logo-width: 224px;
     height: rem($logo-height * $logo-xs-shrink-factor);
     width: rem($logo-width * $logo-xs-shrink-factor);
     transition: all $transition-time-default;
-    transform-origin: top center;
+    transform-origin: top left;
 
     @include mappy-bp(xs) {
       height: rem($logo-height);
@@ -99,10 +99,10 @@ $logo-width: 224px;
     }
 
     .c-topbar--compact & {
-      transform: scale(.675 / $logo-xs-shrink-factor);
+      transform: translateX(rem(-34px)) scale(.675 / $logo-xs-shrink-factor);
 
       @include mappy-bp(xs) {
-        transform: scale(.675);
+        transform: translateX(rem(-34px)) scale(.675);
       }
     }
   }
