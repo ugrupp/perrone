@@ -94,7 +94,7 @@ $logo-width: 224px;
     transition: all $transition-time-default;
     transform-origin: top left;
 
-    @include mappy-bp(xs) {
+    @include mappy-bp(360px) {
       height: rem($logo-height);
       width: rem($logo-width);
     }

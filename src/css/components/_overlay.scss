@@ -33,24 +33,24 @@
   }
 }
 
-.c-overlay__closer {
+.c-overlay__closer-wrapper {
   position: absolute;
-  right: rem($container-gutter - 17px);
+  right: 0;
+  left: 0;
   top: rem(30px);
+
+  @include mappy-bp(md) {
+    top: rem(50px);
+  }
+}
+
+.c-overlay__closer {
+  margin-left: auto;
 
   display: block;
   width: rem(42px);
   height: rem(42px);
   transition: all $transition-time-default;
-
-  @include mappy-bp(sm) {
-    right: rem(30px);
-  }
-
-  @include mappy-bp(md) {
-    top: rem(50px);
-    right: rem(50px);
-  }
 
   &:hover,
   &:focus {
