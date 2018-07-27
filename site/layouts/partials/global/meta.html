@@ -5,10 +5,9 @@
 {{ .Hugo.Generator }}
 
 {{/* Title */}}
-{{ define "site_title" }}{{ .Site.Title | upper -}}{{ end }}
+{{ define "site_title" }}AUTOHAUS PERRONE / Freiburg-Tiengen{{ end }}
 <title>{{ block "site_title" . }}{{ end }}</title>
 <meta itemprop="name" content='{{ block "site_title" . }}{{ end }}' />
-<meta property="og:title" content='{{ block "site_title" . }}{{ end }}' />
 
 {{/* Description */}}
 {{ with .Description }}
@@ -22,6 +21,7 @@
 {{/* Remaining og tags */}}
 <meta property="og:locale" content="{{ $.Site.Params.locale }}" />
 <meta property="og:type" content="website" />
+<meta property="og:title" content='{{ .Site.Title -}}' />
 <meta property="og:url" content="https://www.autohaus-perrone.de/" />
 <meta property="og:site_name" content="{{ .Site.Title -}}" />
 <meta property="og:latitude" content="47.982049" />
@@ -32,7 +32,7 @@
 <meta property="og:postal_code" content="79112" />
 <meta property="og:country_name" content="Deutschland/Germany" />
 <meta property="og:phone_number" content="07664 3715" />
-<meta property="article:tag" content="Autohaus, Perrone, KFZ-Reparaturen, Reparaturen, Wartung, Auspuff, Bremsen, Ölservice, Unfallreparaturen, Instandsetzung, Hauptuntersuchung, HU, Abgasuntersuchung, AU, Frontscheibenreparatur, Jahreswagen, Gebrauchtwagen" />
+<meta property="article:tag" content="Werkstatt" />
 
 {{/* Favicon */}}
 {{/* TODO */}}
