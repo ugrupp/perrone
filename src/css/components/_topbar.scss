@@ -102,7 +102,7 @@ $logo-width: 224px;
     .c-topbar--compact & {
       transform: translateX(rem(-34px)) scale(.675 / $logo-xs-shrink-factor);
 
-      @include mappy-bp(xs) {
+      @include mappy-bp(360px) {
         transform: translateX(rem(-34px)) scale(.675);
       }
     }
