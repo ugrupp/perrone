@@ -1,9 +1,13 @@
 ---
 headless: true
-image: poster.jpeg
+images:
+- src: poster-1.jpeg
+- src: poster-2.jpeg
 resources:
-- src: poster.jpeg
-  title: Willkommen
+- src: poster-1.jpeg
+  title: Autohaus 1
+- src: poster-2.jpeg
+  title: Autohaus 2
 ---
 
 {{< headline level="2" class="c-headline--ci" title="Willkommen" >}}
