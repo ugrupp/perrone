@@ -1,9 +1,12 @@
 ---
 headless: true
 images:
+- src: galerie-1.jpg
 - src: poster-1.jpeg
 - src: poster-2.jpeg
 resources:
+- src: galerie-1.jpg
+  title: Autohaus
 - src: poster-1.jpeg
   title: Autohaus 1
 - src: poster-2.jpeg
