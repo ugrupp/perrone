@@ -8,7 +8,7 @@ This project is released under the [GPL-3.0](LICENSE). Please make sure you unde
 
 ### Prerequisites
 
-You need to have the latest/LTS [node](https://nodejs.org/en/download/) and [npm](https://www.npmjs.com/get-npm) versions installed in order to build this site.
+You need to have [Node](https://nodejs.org/en/download/) 16 and [npm](https://www.npmjs.com/get-npm) installed in order to build this site.
 
 Next step, clone this repository and run:
 
@@ -23,26 +23,18 @@ This will take some time and will install all packages necessary.
 While developing your website, use:
 
 ```bash
-gulp
+npm run dev
 ```
 
-A new browser should pop up to preview the site. BrowserSync will automatically reload the CSS or refresh the whole page, when stylesheets or content changes.
+A new browser should pop up to preview the site.
 
 ### Static build
 
 To build a static version of the website inside the `/dist` folder, run:
 
 ```bash
-gulp build
+npm run build
 ```
-
-To get a preview of posts or articles not yet published, run:
-
-```bash
-gulp build-preview
-```
-
-See [gulpfile.js](gulpfile.js) for all tasks.
 
 ## Structure
 

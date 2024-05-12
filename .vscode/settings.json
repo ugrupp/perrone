@@ -1,5 +1,11 @@
 {
-    "files.associations": {
-        "*.html": "gohtml"
-    }
+    "stylelint.validate": [
+        "css",
+        "scss"
+    ],
+    "stylelint.configFile": "stylelint.config.js",
+    "stylelint.snippet": [
+        "css",
+        "scss"
+    ]
 }
