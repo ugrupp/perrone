@@ -70,6 +70,10 @@ $contact-signet-size: 153px;
   margin-left: rem($container-gutter);
   height: rem(350px);
 
+  @include mappy-bp(sm) {
+    height: rem(700px);
+  }
+
   @include mappy-bp($bp-map-collapse) {
     margin-left: 0;
     position: absolute;
