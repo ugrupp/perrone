@@ -1,0 +1,109 @@
+// Team
+// --------------------------------------------------
+
+.c-team {
+  .o-container--narrow {
+    @include mappy-bp(max md) {
+      max-width: rem(450px + 2 * $container-gutter);
+    }
+  }
+}
+
+.c-team__members {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem($grid-gutter * .5);
+  justify-items: center;
+
+  @include mappy-bp($bp-grid-collapse) {
+    grid-template-columns: 1fr 1fr;
+    gap: rem($grid-gutter * .5) rem($grid-gutter);
+  }
+
+  @include mappy-bp(md) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.c-team__members-col {
+  width: rem(200px);
+}
+
+.c-team__members-col--title {
+  justify-self: start;
+}
+
+// Team member
+.c-team__member {
+  .c-headline {
+    margin-bottom: .225em;
+  }
+}
+
+.c-team__member-img-wrapper {
+  width: rem(200px);
+  height: rem(200px);
+  border-radius: 50%;
+  overflow: hidden;
+
+  margin-bottom: rem(15px);
+}
+
+.c-team__member-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all $transition-time-long;
+
+  &.lazyload,
+  &.lazyloading {
+    opacity: 0;
+  }
+}
+
+// Media
+.c-team__media {
+  margin-top: rem(80px);
+}
+
+.c-team__media-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: rem(40px) rem($grid-gutter);
+
+  @include mappy-bp($bp-grid-collapse) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Image
+.c-team__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all $transition-time-long;
+
+  &.lazyload,
+  &.lazyloading {
+    opacity: 0;
+  }
+}
+
+// Video
+.c-team__video {
+  padding-left: rem($container-gutter * 2);
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @include mappy-bp($bp-grid-collapse) {
+    padding-left: 0;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

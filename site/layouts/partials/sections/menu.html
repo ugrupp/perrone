@@ -10,7 +10,7 @@
     {{/* Main menu */}}
     <ul class="c-menu__main">
       {{ $currentPage := . }}
-      {{ range (slice "autohaus" "leistungen" "fahrzeuge" "kontakt") }}
+      {{ range (slice "autohaus" "team" "leistungen" "fahrzeuge" "kontakt") }}
         <li>
           <a href="/#{{ . }}" data-menu-link>
             {{ humanize . }}
