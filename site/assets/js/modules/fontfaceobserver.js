@@ -58,7 +58,7 @@ const fontsBody = transformFontData([
       {
         weight: 400,
         styles: [
-          'italic',
+          'normal',
         ],
       },
     ],

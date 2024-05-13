@@ -14,8 +14,9 @@
 
 @mixin font-ci {
   font-family: $font-family-ci-fallback;
-  font-style: italic;
+  font-style: normal;
   text-transform: uppercase;
+  letter-spacing: .033em;
 
   // fonts-loaded global flag, triggered by JS
   .has-loaded-fonts-ci & {
