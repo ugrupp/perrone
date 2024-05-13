@@ -73,7 +73,7 @@
   gap: rem(40px) rem($grid-gutter);
 
   @include mappy-bp($bp-grid-collapse) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 1fr;
   }
 }
 
