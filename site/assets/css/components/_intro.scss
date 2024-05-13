@@ -1,13 +1,8 @@
-//
 // Intro
 // --------------------------------------------------
 
 .c-intro {
   position: relative;
-
-  @include mappy-bp($bp-grid-collapse) {
-    padding-bottom: rem($overlap-size);
-  }
 
   .o-container {
     transform: translateY(rem(-$overlap-size));
@@ -24,6 +19,41 @@
   &.lazyload,
   &.lazyloading {
     opacity: 0;
+  }
+}
+
+// Image col 2
+.c-intro__image-col {
+  .c-intro__img-wrapper {
+    margin-left: rem(-$container-gutter);
+    margin-right: rem(-$container-gutter);
+
+    @include mappy-bp($bp-grid-collapse) {
+      margin-right: 0;
+    }
+
+    @include mappy-bp(xl) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+// Video
+.c-intro__video {
+  padding-left: rem($container-gutter * 2);
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @include mappy-bp($bp-grid-collapse) {
+    padding-left: 0;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 

@@ -5,7 +5,7 @@
   <div class="c-intro">
     <div class="o-container">
       <div class="o-grid">
-        {{/* Image col */}}
+        {{/* Slideshow col */}}
         <div class="o-grid__col">
           <div class="c-intro__img-wrapper">
             {{/* Fading images */}}
@@ -37,6 +37,35 @@
             <article class="c-richtext c-richtext--sm">
               {{ $intro.Content }}
             </article>
+          </div>
+        </div>
+
+        {{/* Image col */}}
+        <div class="o-grid__col c-intro__image-col">
+          <div class="c-intro__img-wrapper">
+            {{ with $intro.Resources.GetMatch $intro.Params.image }}
+              {{ $imageSmall := .Resize "500x" }}
+              {{ $imageMedium := .Resize "800x" }}
+               <img
+                alt="{{ .Title }}"
+                src="{{ $imageSmall.RelPermalink }}"
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-srcset="{{ $imageSmall.RelPermalink }} 500w, {{ $imageMedium.RelPermalink }} 800w"
+                data-sizes="auto"
+                class="c-intro__img lazyload" />
+            {{ end }}
+          </div>
+        </div>
+
+        {{/* Video col */}}
+        <div class="o-grid__col">
+          <div class="c-intro__video">
+            {{ with $intro.Resources.GetMatch $intro.Params.video }}
+              <video width="800" height="1064" muted autoplay loop>
+                <source src="{{ .RelPermalink }}" type="{{ .MediaType.Type }}">
+                Your browser does not support the video tag.
+              </video>
+            {{ end }}
           </div>
         </div>
       </div>
