@@ -67,13 +67,10 @@
   margin-top: rem(80px);
 }
 
-.c-team__media-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: rem(40px) rem($grid-gutter);
-
-  @include mappy-bp($bp-grid-collapse) {
-    grid-template-columns: 50% 1fr;
+.c-team__media-grid-col--video {
+  @include mappy-bp(max $bp-grid-collapse) {
+    margin-bottom: rem(-40px);
+    order: -1;
   }
 }
 

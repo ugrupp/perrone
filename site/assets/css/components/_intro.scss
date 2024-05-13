@@ -27,9 +27,11 @@
   .c-intro__img-wrapper {
     margin-left: rem(-$container-gutter);
     margin-right: rem(-$container-gutter);
+    margin-bottom: rem(-40px);
 
     @include mappy-bp($bp-grid-collapse) {
       margin-right: 0;
+      margin-bottom: 0;
     }
 
     @include mappy-bp(xl) {

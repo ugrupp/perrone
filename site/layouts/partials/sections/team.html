@@ -39,9 +39,9 @@
     {{/* Media section */}}
     <div class="c-team__media">
       <div class="o-container">
-        <div class="c-team__media-grid">
+        <div class="o-grid">
           {{/* Image col */}}
-          <div class="c-team__media-grid-col">
+          <div class="o-grid__col">
             <div class="c-team__img-wrapper">
               {{ with $team.Resources.GetMatch $team.Params.image }}
                 {{ $imageSmall := .Resize "500x" }}
@@ -58,7 +58,7 @@
           </div>
 
           {{/* Video col */}}
-          <div class="c-team__media-grid-col">
+          <div class="o-grid__col c-team__media-grid-col--video">
             <div class="c-team__video">
               {{ with $team.Resources.GetMatch $team.Params.video }}
                 <video width="1064" height="800" muted autoplay loop>
