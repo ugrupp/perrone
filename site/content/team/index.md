@@ -6,8 +6,6 @@ team:
   position: "KFZ-Meister"
 - src: silke-perrone.jpg
   position: "Buchhaltung"
-- src: florian-bickel.jpg
-  position: "KFZ-Mechatroniker"
 - src: zekeria-haschimi.jpg
   position: "KFZ-Mechatroniker"
 - src: hanni-landerer.jpg
@@ -19,8 +17,6 @@ resources:
   title: "Raffaele Perrone"
 - src: silke-perrone.jpg
   title: "Silke Perrone"
-- src: florian-bickel.jpg
-  title: "Florian Bickel"
 - src: zekeria-haschimi.jpg
   title: "Zekeria Haschimi"
 - src: hanni-landerer.jpg
