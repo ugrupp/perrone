@@ -1,0 +1,15 @@
+{{/* Set headless bundle which holds the content */}}
+{{ $feed := .Site.GetPage "page" "feed" }}
+
+<section class="o-main__section o-main__section--no-pad" id="aktuelles">
+  <article class="c-feed">
+    <div class="o-container">
+      <h2 class="c-headline c-headline--ci">{{ $feed.Params.title }}</h2>
+
+      {{/* Curator feed */}}
+      <div class="c-feed__content">
+        <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+      </div>
+    </div>
+  </article>
+</section>

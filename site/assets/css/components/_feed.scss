@@ -1,0 +1,11 @@
+//
+// Feed
+// --------------------------------------------------
+
+.c-feed {
+  padding-bottom: rem($contact-signet-size * 0.5 + $section-padding * 0.5);
+}
+
+.c-feed__content {
+  margin-top: rem($grid-gutter * 0.5);
+}

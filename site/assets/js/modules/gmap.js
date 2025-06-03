@@ -168,7 +168,9 @@ function initMap() {
       lng: 7.718937,
     };
 
-    let map = new window.google.maps.Map(document.getElementById('contact-map'), {
+    let mapEl = document.getElementById('contact-map')
+
+    let map = new window.google.maps.Map(mapEl, {
       zoom: 15,
       styles: mapStyles,
       center: perrone,
@@ -191,7 +193,13 @@ function initMap() {
         strokeWeight: 0,
       },
     });
+
+    mapEl.classList.add('map-initialized');
   }
 }
 
 window.initMap = initMap;
+
+if (typeof window.google !== 'undefined' && !document.getElementById('contact-map')?.classList.contains('map-initialized')) {
+  initMap();
+}

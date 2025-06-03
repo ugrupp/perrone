@@ -2,7 +2,7 @@
 // --------------------------------------------------
 
 .c-team {
-  padding-bottom: rem($overlap-size);
+  padding-bottom: rem($section-padding);
 
   .o-container--narrow {
     @include mappy-bp(max md) {
