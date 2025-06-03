@@ -108,11 +108,15 @@
 
     @include mappy-bp($bp-menu-collapse) {
       margin-top: 0;
-      margin-left: rem(40px);
+      margin-left: rem(20px);
 
       svg {
         display: block;
       }
+    }
+
+    @include mappy-bp(xl) {
+      margin-left: rem(40px);
     }
   }
 
