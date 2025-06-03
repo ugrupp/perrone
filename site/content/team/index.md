@@ -10,8 +10,6 @@ team:
   position: "KFZ-Mechatroniker"
 - src: hanni-landerer.jpg
   position: "Büro + Empfang"
-image: werkstatt-1.jpg
-video: video-werkstatt-2.mp4
 resources:
 - src: raffaele-perrone.jpg
   title: "Raffaele Perrone"
@@ -21,6 +19,4 @@ resources:
   title: "Zekeria Haschimi"
 - src: hanni-landerer.jpg
   title: "Hanni Landerer"
-- src: werkstatt-1.jpg
-  title: "Werkstatt"
 ---

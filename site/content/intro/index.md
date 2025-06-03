@@ -1,11 +1,10 @@
 ---
 headless: true
 images:
-- src: galerie-1.jpg
 - src: poster-1.jpeg
 - src: poster-2.jpeg
-image: team.jpg
-video: video-werkstatt-1.mp4
+image: galerie-1.jpg
+video: video-werkstatt-2.mp4
 resources:
 - src: galerie-1.jpg
   title: Autohaus
@@ -13,8 +12,6 @@ resources:
   title: Autohaus 1
 - src: poster-2.jpeg
   title: Autohaus 2
-- src: team.jpg
-  title: Team
 ---
 
 {{< headline level="2" class="c-headline--ci" title="Willkommen" >}}

@@ -2,6 +2,8 @@
 // --------------------------------------------------
 
 .c-team {
+  padding-bottom: rem($overlap-size);
+
   .o-container--narrow {
     @include mappy-bp(max md) {
       max-width: rem(450px + 2 * $container-gutter);
@@ -59,48 +61,5 @@
   &.lazyload,
   &.lazyloading {
     opacity: 0;
-  }
-}
-
-// Media
-.c-team__media {
-  margin-top: rem(80px);
-}
-
-.c-team__media-grid-col--video {
-  @include mappy-bp(max $bp-grid-collapse) {
-    margin-bottom: rem(-40px);
-    order: -1;
-  }
-}
-
-// Image
-.c-team__img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: all $transition-time-long;
-
-  &.lazyload,
-  &.lazyloading {
-    opacity: 0;
-  }
-}
-
-// Video
-.c-team__video {
-  padding-left: rem($container-gutter * 2);
-  display: block;
-  width: 100%;
-  height: auto;
-
-  @include mappy-bp($bp-grid-collapse) {
-    padding-left: 0;
-  }
-
-  video {
-    display: block;
-    width: 100%;
-    height: auto;
   }
 }
